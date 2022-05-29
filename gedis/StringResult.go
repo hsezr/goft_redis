@@ -16,3 +16,11 @@ func (this *StringResult) Unwrap() string {
 
 	return this.Result
 }
+
+func (this *StringResult) Unwrap_Or(str string) string {
+	if this.Err != nil {
+		return str
+	}
+
+	return this.Result
+}
